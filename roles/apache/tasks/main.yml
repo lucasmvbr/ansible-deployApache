@@ -1,0 +1,27 @@
+---
+# tasks file for apache
+
+- name: instala apache
+  yum:
+    name: httpd
+    state: latest
+    update_cache: yes
+
+- name: desabilita o firewall
+  service:
+    name: firewalld
+    state: stopped
+    enabled: False
+       
+- name: Copy apache default page
+  template:
+    src: index.html
+    dest: /var/www/html/index.html
+  notify:
+   - restart apache       
+       
+- name: start apache
+  service:
+    name: httpd
+    state: started
+    enabled: yes

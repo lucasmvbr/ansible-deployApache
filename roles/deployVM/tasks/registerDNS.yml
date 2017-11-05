@@ -1,0 +1,14 @@
+    - name: Registra dns 
+      nsupdate:
+        server: "{{ dns_server }}"
+        zone: "{{ dom }}"
+        record: "{{ inventory_hostname }}"
+        value: "{{ ip }}"
+        type: "A"
+    #- name: Registra dns reverso
+    #  nsupdate:
+    #    server: "{{ dns_server }}"
+    #    zone: "{{ zone_rev }}"
+    #    type: PTR
+    #    record: "{{ ip_rev }}"
+    #    value: "{{ inventory_hostname }}.{{ dom }}."

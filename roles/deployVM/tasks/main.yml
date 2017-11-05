@@ -1,0 +1,5 @@
+---
+# tasks file for deployVM
+
+- import_tasks: deployVM.yml
+- import_tasks: registerDNS.yml

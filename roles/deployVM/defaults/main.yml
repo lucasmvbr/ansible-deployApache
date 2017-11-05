@@ -1,0 +1,12 @@
+---
+# defaults file for deployVM
+
+Datacenter: 'Home'
+Cluster: 'Home'
+template: 'centos7'
+portGroup: 'VM Network'
+#ip: '192.168.20.152'
+mask: '255.255.255.0'
+gw: '192.168.20.1'
+dom: 'vinturini.local'
+dns_server: '192.168.20.150'

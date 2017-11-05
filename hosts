@@ -1,0 +1,4 @@
+[webservers]
+web02 ip=192.168.20.153 ansible_ssh_user=root ansible_ssh_pass=Vintu@123
+web03 ip=192.168.20.154 ansible_ssh_user=root ansible_ssh_pass=Vintu@123
+web04 ip=192.168.20.155 ansible_ssh_user=root ansible_ssh_pass=Vintu@123

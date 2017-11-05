@@ -1,0 +1,5 @@
+---
+# vars from deployvm
+
+ip_rev: '{{ip|ipaddr("revdns")}}'
+zone_rev: '20.168.192.in-addr-arpa.'

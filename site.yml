@@ -1,0 +1,27 @@
+- name: Create VMware guest
+  hosts: webservers
+  gather_facts: false
+  connection: local
+  vars_prompt:
+    - name: "vcenter_hostname"
+      prompt: "Enter vcenter hostname"
+      private: no
+      default: "vcsa.vinturini.local"
+    - name: "vcenter_user"
+      prompt: "Enter vcenter username"
+      default: "administrator@vsphere.local"
+      private: no
+    - name: "vcenter_pass"
+      prompt: "Enter vcenter password"
+      private: yes
+      
+  roles:
+    - deployVM
+    
+- name: Deploy Apache
+  hosts: webservers
+  gather_facts: true  
+  roles:  
+    - epel
+    - apache
+  
